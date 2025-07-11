@@ -1,0 +1,118 @@
+{
+  "timestamp": "2025-07-11T08:24:09.967Z",
+  "version": "1.0",
+  "entries": [
+    {
+      "id": "entry_mcyjvjnr_6ufm9qlyl",
+      "key": "swarm-auto-centralized-1752222134911/coordinator/analysis",
+      "value": "{\"project_overview\":{\"name\":\"ng-stencil-design-system\",\"description\":\"Angular 19 + Stencil design system todo application\",\"architecture\":\"Monorepo with Angular application consuming Stencil design system library\"},\"requirements_analysis\":{\"framework_requirements\":{\"angular_version\":\"19\",\"component_type\":\"standalone_components\",\"no_modules\":true},\"application_features\":[\"Add todos via input field and button\",\"Display todos in a list\",\"Delete todos from list\",\"Edit todos by clicking on them\",\"Single page application\",\"Empty list at startup\"],\"design_system\":{\"framework\":\"Stencil\",\"purpose\":\"Reusable UI components for Angular app\"}},\"project_structure\":{\"root_directory\":\"/workspaces/ng-stencil-design-system\",\"proposed_structure\":{\"packages\":{\"design-system\":{\"path\":\"packages/design-system\",\"type\":\"Stencil library\",\"purpose\":\"Reusable UI components\",\"components\":[\"ds-input\",\"ds-button\",\"ds-todo-item\",\"ds-todo-list\"]},\"todo-app\":{\"path\":\"packages/todo-app\",\"type\":\"Angular 19 application\",\"purpose\":\"Todo application consuming design system\",\"features\":[\"TodoPage\",\"TodoService\",\"Todo model\"]}},\"configuration_files\":[\"package.json (root workspace)\",\"packages/design-system/package.json\",\"packages/design-system/stencil.config.ts\",\"packages/todo-app/package.json\",\"packages/todo-app/angular.json\",\"packages/todo-app/tsconfig.json\"]}},\"component_architecture\":{\"stencil_components\":{\"ds-input\":{\"purpose\":\"Text input field for todo entry\",\"props\":[\"value\",\"placeholder\",\"onInput\"],\"events\":[\"input\",\"change\"]},\"ds-button\":{\"purpose\":\"Action button (add, delete, edit)\",\"props\":[\"variant\",\"disabled\",\"onClick\"],\"variants\":[\"primary\",\"secondary\",\"danger\"]},\"ds-todo-item\":{\"purpose\":\"Individual todo item display and editing\",\"props\":[\"todo\",\"editing\",\"onEdit\",\"onDelete\",\"onSave\"],\"features\":[\"inline editing\",\"delete action\"]},\"ds-todo-list\":{\"purpose\":\"Container for todo items\",\"props\":[\"todos\",\"onTodoEdit\",\"onTodoDelete\"],\"features\":[\"empty state\",\"list rendering\"]}},\"angular_components\":{\"TodoPageComponent\":{\"purpose\":\"Main application page (standalone component)\",\"responsibilities\":[\"Coordinate todo operations\",\"Manage application state\",\"Render design system components\"]}},\"angular_services\":{\"TodoService\":{\"purpose\":\"Manage todo state and operations\",\"methods\":[\"addTodo\",\"deleteTodo\",\"updateTodo\",\"getTodos\"],\"storage\":\"localStorage for persistence\"}}},\"integration_strategy\":{\"stencil_angular_integration\":{\"method\":\"Custom Elements / Web Components\",\"setup\":\"defineCustomElements() in main.ts\",\"typing\":\"Custom element type definitions\",\"build_order\":\"Stencil library first, then Angular app\"},\"development_workflow\":{\"1\":\"Develop Stencil components with isolated testing\",\"2\":\"Build Stencil library and generate distribution\",\"3\":\"Integrate components into Angular application\",\"4\":\"Test end-to-end functionality\"}},\"technical_specifications\":{\"todo_model\":{\"interface\":\"Todo\",\"properties\":{\"id\":\"string (UUID)\",\"text\":\"string\",\"createdAt\":\"Date\",\"updatedAt\":\"Date\"}},\"state_management\":{\"approach\":\"Service-based with RxJS\",\"persistence\":\"localStorage\",\"reactivity\":\"BehaviorSubject for todo list\"}},\"next_steps\":{\"immediate_actions\":[\"Initialize workspace with package.json\",\"Create Stencil design system package\",\"Create Angular application package\",\"Setup build and development scripts\",\"Implement core Stencil components\",\"Develop Angular application logic\",\"Integrate and test complete system\"],\"agent_coordination\":{\"stencil_developer\":\"Implement design system components\",\"angular_developer\":\"Build todo application logic\",\"integration_specialist\":\"Ensure seamless component integration\",\"testing_coordinator\":\"End-to-end testing and validation\"}}}",
+      "type": "object",
+      "namespace": "default",
+      "tags": [],
+      "metadata": {},
+      "owner": "system",
+      "accessLevel": "shared",
+      "createdAt": "2025-07-11T08:23:52.647Z",
+      "updatedAt": "2025-07-11T08:23:52.647Z",
+      "lastAccessedAt": "2025-07-11T08:23:52.647Z",
+      "version": 1,
+      "size": 4077,
+      "compressed": true,
+      "checksum": "0dc0eef65ee414a8e41d9b240501c5c0efea4aadf8d0d11708b0b746f9aff000",
+      "references": [],
+      "dependencies": []
+    },
+    {
+      "id": "entry_mcyjvx0r_1jfsw0ngf",
+      "key": "swarm-auto-centralized-1752222134911/ux/design",
+      "value": "\"{\\n  \\\"layout_design\\\": {\\n    \\\"container\\\": {\\n      \\\"max_width\\\": \\\"600px\\\",\\n      \\\"margin\\\": \\\"0 auto\\\",\\n      \\\"padding\\\": \\\"2rem\\\",\\n      \\\"min_height\\\": \\\"100vh\\\",\\n      \\\"background\\\": \\\"linear-gradient(135deg, #667eea 0%, #764ba2 100%)\\\"\\n    },\\n    \\\"main_card\\\": {\\n      \\\"background\\\": \\\"white\\\",\\n      \\\"border_radius\\\": \\\"16px\\\",\\n      \\\"box_shadow\\\": \\\"0 20px 40px rgba(0,0,0,0.1)\\\",\\n      \\\"padding\\\": \\\"2rem\\\",\\n      \\\"width\\\": \\\"100%\\\"\\n    },\\n    \\\"header\\\": {\\n      \\\"margin_bottom\\\": \\\"2rem\\\",\\n      \\\"text_align\\\": \\\"center\\\"\\n    },\\n    \\\"input_section\\\": {\\n      \\\"margin_bottom\\\": \\\"2rem\\\",\\n      \\\"display\\\": \\\"flex\\\",\\n      \\\"gap\\\": \\\"1rem\\\",\\n      \\\"align_items\\\": \\\"stretch\\\"\\n    },\\n    \\\"todo_list\\\": {\\n      \\\"min_height\\\": \\\"200px\\\",\\n      \\\"max_height\\\": \\\"400px\\\",\\n      \\\"overflow_y\\\": \\\"auto\\\"\\n    }\\n  },\\n  \\\"visual_hierarchy\\\": {\\n    \\\"typography\\\": {\\n      \\\"header\\\": {\\n        \\\"font_size\\\": \\\"2.5rem\\\",\\n        \\\"font_weight\\\": \\\"700\\\",\\n        \\\"color\\\": \\\"#2d3748\\\",\\n        \\\"margin_bottom\\\": \\\"0.5rem\\\"\\n      },\\n      \\\"subtitle\\\": {\\n        \\\"font_size\\\": \\\"1.1rem\\\",\\n        \\\"color\\\": \\\"#718096\\\",\\n        \\\"font_weight\\\": \\\"400\\\"\\n      },\\n      \\\"todo_text\\\": {\\n        \\\"font_size\\\": \\\"1rem\\\",\\n        \\\"color\\\": \\\"#2d3748\\\",\\n        \\\"line_height\\\": \\\"1.5\\\"\\n      },\\n      \\\"empty_state\\\": {\\n        \\\"font_size\\\": \\\"1.1rem\\\",\\n        \\\"color\\\": \\\"#a0aec0\\\",\\n        \\\"text_align\\\": \\\"center\\\",\\n        \\\"font_style\\\": \\\"italic\\\"\\n      }\\n    },\\n    \\\"color_scheme\\\": {\\n      \\\"primary\\\": \\\"#667eea\\\",\\n      \\\"primary_hover\\\": \\\"#5a67d8\\\",\\n      \\\"success\\\": \\\"#48bb78\\\",\\n      \\\"danger\\\": \\\"#f56565\\\",\\n      \\\"warning\\\": \\\"#ed8936\\\",\\n      \\\"text_primary\\\": \\\"#2d3748\\\",\\n      \\\"text_secondary\\\": \\\"#718096\\\",\\n      \\\"text_muted\\\": \\\"#a0aec0\\\",\\n      \\\"background\\\": \\\"#ffffff\\\",\\n      \\\"border\\\": \\\"#e2e8f0\\\"\\n    }\\n  },\\n  \\\"component_specifications\\\": {\\n    \\\"input_field\\\": {\\n      \\\"type\\\": \\\"text\\\",\\n      \\\"placeholder\\\": \\\"What needs to be done?\\\",\\n      \\\"border\\\": \\\"2px solid #e2e8f0\\\",\\n      \\\"border_radius\\\": \\\"8px\\\",\\n      \\\"padding\\\": \\\"0.75rem 1rem\\\",\\n      \\\"font_size\\\": \\\"1rem\\\",\\n      \\\"flex\\\": \\\"1\\\",\\n      \\\"focus_state\\\": {\\n        \\\"border_color\\\": \\\"#667eea\\\",\\n        \\\"box_shadow\\\": \\\"0 0 0 3px rgba(102, 126, 234, 0.1)\\\",\\n        \\\"outline\\\": \\\"none\\\"\\n      }\\n    },\\n    \\\"add_button\\\": {\\n      \\\"background\\\": \\\"#667eea\\\",\\n      \\\"color\\\": \\\"white\\\",\\n      \\\"border\\\": \\\"none\\\",\\n      \\\"border_radius\\\": \\\"8px\\\",\\n      \\\"padding\\\": \\\"0.75rem 1.5rem\\\",\\n      \\\"font_size\\\": \\\"1rem\\\",\\n      \\\"font_weight\\\": \\\"600\\\",\\n      \\\"cursor\\\": \\\"pointer\\\",\\n      \\\"hover_state\\\": {\\n        \\\"background\\\": \\\"#5a67d8\\\",\\n        \\\"transform\\\": \\\"translateY(-1px)\\\"\\n      },\\n      \\\"disabled_state\\\": {\\n        \\\"background\\\": \\\"#a0aec0\\\",\\n        \\\"cursor\\\": \\\"not-allowed\\\",\\n        \\\"transform\\\": \\\"none\\\"\\n      }\\n    },\\n    \\\"todo_item\\\": {\\n      \\\"background\\\": \\\"#f7fafc\\\",\\n      \\\"border\\\": \\\"1px solid #e2e8f0\\\",\\n      \\\"border_radius\\\": \\\"8px\\\",\\n      \\\"padding\\\": \\\"1rem\\\",\\n      \\\"margin_bottom\\\": \\\"0.5rem\\\",\\n      \\\"display\\\": \\\"flex\\\",\\n      \\\"justify_content\\\": \\\"space-between\\\",\\n      \\\"align_items\\\": \\\"center\\\",\\n      \\\"transition\\\": \\\"all 0.2s ease\\\",\\n      \\\"hover_state\\\": {\\n        \\\"background\\\": \\\"#edf2f7\\\",\\n        \\\"border_color\\\": \\\"#cbd5e0\\\"\\n      }\\n    },\\n    \\\"edit_input\\\": {\\n      \\\"background\\\": \\\"white\\\",\\n      \\\"border\\\": \\\"2px solid #667eea\\\",\\n      \\\"border_radius\\\": \\\"4px\\\",\\n      \\\"padding\\\": \\\"0.5rem\\\",\\n      \\\"font_size\\\": \\\"1rem\\\",\\n      \\\"width\\\": \\\"100%\\\"\\n    },\\n    \\\"action_buttons\\\": {\\n      \\\"edit_button\\\": {\\n        \\\"background\\\": \\\"#ed8936\\\",\\n        \\\"color\\\": \\\"white\\\",\\n        \\\"border\\\": \\\"none\\\",\\n        \\\"border_radius\\\": \\\"4px\\\",\\n        \\\"padding\\\": \\\"0.5rem 0.75rem\\\",\\n        \\\"margin_right\\\": \\\"0.5rem\\\",\\n        \\\"cursor\\\": \\\"pointer\\\"\\n      },\\n      \\\"delete_button\\\": {\\n        \\\"background\\\": \\\"#f56565\\\",\\n        \\\"color\\\": \\\"white\\\",\\n        \\\"border\\\": \\\"none\\\",\\n        \\\"border_radius\\\": \\\"4px\\\",\\n        \\\"padding\\\": \\\"0.5rem 0.75rem\\\",\\n        \\\"cursor\\\": \\\"pointer\\\"\\n      },\\n      \\\"save_button\\\": {\\n        \\\"background\\\": \\\"#48bb78\\\",\\n        \\\"color\\\": \\\"white\\\",\\n        \\\"border\\\": \\\"none\\\",\\n        \\\"border_radius\\\": \\\"4px\\\",\\n        \\\"padding\\\": \\\"0.5rem 0.75rem\\\",\\n        \\\"margin_right\\\": \\\"0.5rem\\\",\\n        \\\"cursor\\\": \\\"pointer\\\"\\n      },\\n      \\\"cancel_button\\\": {\\n        \\\"background\\\": \\\"#a0aec0\\\",\\n        \\\"color\\\": \\\"white\\\",\\n        \\\"border\\\": \\\"none\\\",\\n        \\\"border_radius\\\": \\\"4px\\\",\\n        \\\"padding\\\": \\\"0.5rem 0.75rem\\\",\\n        \\\"cursor\\\": \\\"pointer\\\"\\n      }\\n    }\\n  },\\n  \\\"interaction_patterns\\\": {\\n    \\\"add_todo\\\": {\\n      \\\"trigger\\\": \\\"Click add button or press Enter in input field\\\",\\n      \\\"validation\\\": \\\"Input must not be empty or only whitespace\\\",\\n      \\\"feedback\\\": {\\n        \\\"success\\\": \\\"Todo added with subtle animation\\\",\\n        \\\"error\\\": \\\"Input field border turns red with shake animation\\\"\\n      },\\n      \\\"behavior\\\": \\\"Clear input field after successful add\\\"\\n    },\\n    \\\"edit_todo\\\": {\\n      \\\"trigger\\\": \\\"Click on todo text or edit button\\\",\\n      \\\"behavior\\\": \\\"Todo text becomes editable input field\\\",\\n      \\\"actions\\\": [\\\"Save (Enter key or save button)\\\", \\\"Cancel (Escape key or cancel button)\\\"],\\n      \\\"validation\\\": \\\"Edited text must not be empty\\\",\\n      \\\"feedback\\\": {\\n        \\\"success\\\": \\\"Todo updates with fade transition\\\",\\n        \\\"error\\\": \\\"Input field shows validation error\\\"\\n      }\\n    },\\n    \\\"delete_todo\\\": {\\n      \\\"trigger\\\": \\\"Click delete button\\\",\\n      \\\"confirmation\\\": \\\"Optional: Show confirmation dialog for important todos\\\",\\n      \\\"animation\\\": \\\"Slide out and fade animation\\\",\\n      \\\"feedback\\\": \\\"Todo removed with smooth animation\\\"\\n    },\\n    \\\"keyboard_navigation\\\": {\\n      \\\"tab_order\\\": [\\\"Input field\\\", \\\"Add button\\\", \\\"Edit buttons\\\", \\\"Delete buttons\\\"],\\n      \\\"enter_key\\\": \\\"Submit add form or save edit\\\",\\n      \\\"escape_key\\\": \\\"Cancel edit mode\\\"\\n    }\\n  },\\n  \\\"responsive_design\\\": {\\n    \\\"breakpoints\\\": {\\n      \\\"mobile\\\": \\\"320px - 768px\\\",\\n      \\\"tablet\\\": \\\"768px - 1024px\\\",\\n      \\\"desktop\\\": \\\"1024px+\\\"\\n    },\\n    \\\"mobile_adaptations\\\": {\\n      \\\"container_padding\\\": \\\"1rem\\\",\\n      \\\"input_section\\\": {\\n        \\\"flex_direction\\\": \\\"column\\\",\\n        \\\"gap\\\": \\\"0.75rem\\\"\\n      },\\n      \\\"add_button\\\": {\\n        \\\"width\\\": \\\"100%\\\",\\n        \\\"padding\\\": \\\"1rem\\\"\\n      },\\n      \\\"todo_item\\\": {\\n        \\\"flex_direction\\\": \\\"column\\\",\\n        \\\"align_items\\\": \\\"stretch\\\",\\n        \\\"gap\\\": \\\"0.75rem\\\"\\n      },\\n      \\\"action_buttons\\\": {\\n        \\\"display\\\": \\\"flex\\\",\\n        \\\"gap\\\": \\\"0.5rem\\\",\\n        \\\"justify_content\\\": \\\"stretch\\\"\\n      }\\n    },\\n    \\\"touch_targets\\\": {\\n      \\\"minimum_size\\\": \\\"44px\\\",\\n      \\\"spacing\\\": \\\"8px minimum between targets\\\"\\n    }\\n  },\\n  \\\"component_states\\\": {\\n    \\\"application_states\\\": {\\n      \\\"loading\\\": \\\"Show skeleton placeholders\\\",\\n      \\\"empty\\\": \\\"Display friendly empty state message\\\",\\n      \\\"populated\\\": \\\"Show todo list with items\\\",\\n      \\\"error\\\": \\\"Display error message with retry option\\\"\\n    },\\n    \\\"todo_item_states\\\": {\\n      \\\"default\\\": \\\"Normal display with text and action buttons\\\",\\n      \\\"editing\\\": \\\"Text becomes input field with save/cancel buttons\\\",\\n      \\\"deleting\\\": \\\"Show deletion animation\\\",\\n      \\\"error\\\": \\\"Show error state if operation fails\\\"\\n    },\\n    \\\"input_states\\\": {\\n      \\\"default\\\": \\\"Normal input appearance\\\",\\n      \\\"focused\\\": \\\"Highlighted border and shadow\\\",\\n      \\\"error\\\": \\\"Red border with validation message\\\",\\n      \\\"disabled\\\": \\\"Greyed out appearance\\\"\\n    },\\n    \\\"button_states\\\": {\\n      \\\"default\\\": \\\"Normal button appearance\\\",\\n      \\\"hover\\\": \\\"Slightly darker with subtle elevation\\\",\\n      \\\"active\\\": \\\"Pressed appearance\\\",\\n      \\\"disabled\\\": \\\"Greyed out and non-interactive\\\",\\n      \\\"loading\\\": \\\"Show spinner or loading indicator\\\"\\n    }\\n  },\\n  \\\"accessibility_guidelines\\\": {\\n    \\\"semantic_html\\\": {\\n      \\\"main_container\\\": \\\"Use <main> element\\\",\\n      \\\"todo_list\\\": \\\"Use <ul> with <li> elements\\\",\\n      \\\"form\\\": \\\"Use <form> element for input section\\\",\\n      \\\"buttons\\\": \\\"Use <button> elements with proper type attributes\\\"\\n    },\\n    \\\"aria_labels\\\": {\\n      \\\"input_field\\\": \\\"aria-label=\\\\\\\"Add new todo item\\\\\\\"\\\",\\n      \\\"add_button\\\": \\\"aria-label=\\\\\\\"Add todo\\\\\\\"\\\",\\n      \\\"edit_button\\\": \\\"aria-label=\\\\\\\"Edit todo: {todo_text}\\\\\\\"\\\",\\n      \\\"delete_button\\\": \\\"aria-label=\\\\\\\"Delete todo: {todo_text}\\\\\\\"\\\",\\n      \\\"save_button\\\": \\\"aria-label=\\\\\\\"Save changes\\\\\\\"\\\",\\n      \\\"cancel_button\\\": \\\"aria-label=\\\\\\\"Cancel editing\\\\\\\"\\\"\\n    },\\n    \\\"keyboard_support\\\": {\\n      \\\"tab_navigation\\\": \\\"All interactive elements accessible via Tab\\\",\\n      \\\"enter_key\\\": \\\"Submit forms and activate buttons\\\",\\n      \\\"escape_key\\\": \\\"Cancel edit mode\\\",\\n      \\\"arrow_keys\\\": \\\"Navigate between todo items (optional enhancement)\\\"\\n    },\\n    \\\"screen_reader\\\": {\\n      \\\"live_regions\\\": \\\"Announce todo additions/deletions\\\",\\n      \\\"focus_management\\\": \\\"Move focus appropriately after actions\\\",\\n      \\\"descriptive_text\\\": \\\"Provide context for all interactive elements\\\"\\n    },\\n    \\\"color_contrast\\\": {\\n      \\\"text_on_background\\\": \\\"Minimum 4.5:1 ratio\\\",\\n      \\\"button_text\\\": \\\"Minimum 4.5:1 ratio\\\",\\n      \\\"error_indicators\\\": \\\"Use both color and text/icons\\\"\\n    },\\n    \\\"motion_preferences\\\": {\\n      \\\"respect_reduced_motion\\\": \\\"Disable animations if user prefers reduced motion\\\",\\n      \\\"alternative_feedback\\\": \\\"Provide non-motion feedback options\\\"\\n    }\\n  },\\n  \\\"empty_state_design\\\": {\\n    \\\"message\\\": \\\"No todos yet. Add your first task above\\\\!\\\",\\n    \\\"visual\\\": \\\"Subtle illustration or icon\\\",\\n    \\\"encouragement\\\": \\\"Use friendly, motivational tone\\\",\\n    \\\"styling\\\": {\\n      \\\"text_align\\\": \\\"center\\\",\\n      \\\"padding\\\": \\\"3rem 1rem\\\",\\n      \\\"color\\\": \\\"#a0aec0\\\",\\n      \\\"font_style\\\": \\\"italic\\\"\\n    }\\n  },\\n  \\\"animations_and_feedback\\\": {\\n    \\\"micro_interactions\\\": {\\n      \\\"button_hover\\\": \\\"Scale 1.02 with 0.2s ease transition\\\",\\n      \\\"input_focus\\\": \\\"Border color transition 0.2s ease\\\",\\n      \\\"todo_add\\\": \\\"Slide in from top with fade\\\",\\n      \\\"todo_delete\\\": \\\"Slide out to right with fade\\\",\\n      \\\"todo_edit\\\": \\\"Subtle background color transition\\\"\\n    },\\n    \\\"loading_states\\\": {\\n      \\\"add_button\\\": \\\"Show spinner when processing\\\",\\n      \\\"save_button\\\": \\\"Show spinner when saving\\\",\\n      \\\"skeleton_loading\\\": \\\"Use for initial app load\\\"\\n    },\\n    \\\"error_feedback\\\": {\\n      \\\"input_validation\\\": \\\"Shake animation with red border\\\",\\n      \\\"operation_failure\\\": \\\"Toast notification or inline error message\\\"\\n    }\\n  },\\n  \\\"design_tokens\\\": {\\n    \\\"spacing\\\": {\\n      \\\"xs\\\": \\\"0.25rem\\\",\\n      \\\"sm\\\": \\\"0.5rem\\\", \\n      \\\"md\\\": \\\"1rem\\\",\\n      \\\"lg\\\": \\\"1.5rem\\\",\\n      \\\"xl\\\": \\\"2rem\\\",\\n      \\\"xxl\\\": \\\"3rem\\\"\\n    },\\n    \\\"border_radius\\\": {\\n      \\\"sm\\\": \\\"4px\\\",\\n      \\\"md\\\": \\\"8px\\\",\\n      \\\"lg\\\": \\\"16px\\\"\\n    },\\n    \\\"shadows\\\": {\\n      \\\"sm\\\": \\\"0 2px 4px rgba(0,0,0,0.1)\\\",\\n      \\\"md\\\": \\\"0 4px 8px rgba(0,0,0,0.1)\\\",\\n      \\\"lg\\\": \\\"0 20px 40px rgba(0,0,0,0.1)\\\",\\n      \\\"focus\\\": \\\"0 0 0 3px rgba(102, 126, 234, 0.1)\\\"\\n    }\\n  }\\n}\"",
+      "type": "string",
+      "namespace": "default",
+      "tags": [],
+      "metadata": {},
+      "owner": "system",
+      "accessLevel": "shared",
+      "createdAt": "2025-07-11T08:24:09.963Z",
+      "updatedAt": "2025-07-11T08:24:09.963Z",
+      "lastAccessedAt": "2025-07-11T08:24:09.963Z",
+      "version": 1,
+      "size": 13992,
+      "compressed": true,
+      "checksum": "a0de4f8501d034b10a90a08c63fb9ece9bd06827e852af08ab1e8102aac1ef06",
+      "references": [],
+      "dependencies": []
+    }
+  ],
+  "statistics": {
+    "overview": {
+      "totalEntries": 2,
+      "totalSize": 18069,
+      "compressedEntries": 2,
+      "compressionRatio": 0,
+      "indexSize": 100,
+      "memoryUsage": 9414336,
+      "diskUsage": 0
+    },
+    "distribution": {
+      "byNamespace": {
+        "default": {
+          "count": 2,
+          "size": 18069
+        }
+      },
+      "byType": {
+        "object": {
+          "count": 1,
+          "size": 4077
+        },
+        "string": {
+          "count": 1,
+          "size": 13992
+        }
+      },
+      "byOwner": {
+        "system": {
+          "count": 2,
+          "size": 18069
+        }
+      },
+      "byAccessLevel": {
+        "shared": {
+          "count": 2,
+          "size": 18069
+        }
+      }
+    },
+    "temporal": {
+      "entriesCreatedLast24h": 2,
+      "entriesUpdatedLast24h": 2,
+      "entriesAccessedLast24h": 2,
+      "oldestEntry": "2025-07-11T08:23:52.647Z",
+      "newestEntry": "2025-07-11T08:24:09.963Z"
+    },
+    "performance": {
+      "averageQueryTime": 0,
+      "averageWriteTime": 2,
+      "cacheHitRatio": 0,
+      "indexEfficiency": 0.95
+    },
+    "health": {
+      "expiredEntries": 0,
+      "orphanedReferences": 0,
+      "duplicateKeys": 0,
+      "corruptedEntries": 0,
+      "recommendedCleanup": false
+    },
+    "optimization": {
+      "suggestions": [],
+      "potentialSavings": {
+        "compression": 0,
+        "cleanup": 0,
+        "deduplication": 0
+      },
+      "indexOptimization": [
+        "Consider periodic index rebuilding for optimal performance"
+      ]
+    }
+  }
+}
